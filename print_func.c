@@ -14,7 +14,7 @@ int p_char(char c)
 		return (1);
 	}
 	else
-		return (-1);
+		return (0);
 }
 
 int p_str( char *s)
@@ -28,5 +28,5 @@ int p_str( char *s)
 		return (len);
 	}
 	else
-		return (-1);
+		return (0);
 }
