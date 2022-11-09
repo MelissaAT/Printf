@@ -8,15 +8,25 @@
  */
 int p_char(char c)
 {
-	write(1, &c, 1);
-	return (1);
+	if (c != '\0')
+	{
+		write(1, &c, 1);
+		return (1);
+	}
+	else
+		return (-1);
 }
 
 int p_str( char *s)
 {
 	int len;
 
-	len = _strlen(s);
-	write(1, s, len);
-	return (len);
+	if (s != NULL)
+	{
+		len = _strlen(s);
+		write(1, s, len);
+		return (len);
+	}
+	else
+		return (-1);
 }
