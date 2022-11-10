@@ -4,7 +4,7 @@
  * @s: pointer to string
  * Return: return count (success)
  */
-int _strlen(char *s)
+int _strlen(const char *s)
 {
 	int count = 0, i = 0;
 

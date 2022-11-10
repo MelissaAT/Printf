@@ -8,14 +8,17 @@
  */
 int main(void)
 {
-    char *s = "hello, world %d";
+    char *s = "hello, world %d and again";
     char *f = "%d";
     char *t;
-    int position = 0;
+    int place;
+    int place_d;
 
     t = _strstr(s, f);
-    position = _strstr2(s, f);
+    place = _strstr2(s, f);
+    place_d = place + 1;
     printf("%s\n", t);
-    printf("%s\n", s + position);
+    printf("%c\n", s[place]);
+    printf("%c\n", s[place_d]);
     return (0);
 }
