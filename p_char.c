@@ -1,5 +1,9 @@
 #include "main.h"
-
+/**
+ * p_char - prints a char
+ * @c: char to print
+ * Return: length of char or zero (success)
+ */
 int p_char(char c)
 {
         if (c != '\0')

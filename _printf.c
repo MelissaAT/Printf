@@ -1,5 +1,7 @@
 #include "main.h"
-
+/**
+ *
+ */
 int _printf(const char *format,...)
 {
 	int i = 0, count = 0, wht_spc = 0;
@@ -10,28 +12,28 @@ int _printf(const char *format,...)
 	{
 		while (format[i])
 		{
+			/**Check for format specifier*/
 			if (format[i] == '%')
 			{
 				i++;
+				/**Check for whitespace*/
 				while (format[i] == ' ')
 				{
 					i++;
 					wht_spc++;
 				}
+				/**Format specifier accepted*/
 				switch (format[i])
 				{
 				case 'c':
 				count += p_char(va_arg(ap, int));
-				/*function to print character*/
 				break;
 				case 's':
 				count += p_str(va_arg(ap, char *));
-				/*function to print string*/
 				break;	
 				case '%':
 				write(1, &format[i], 1);
 				count++;
-				/*function to print % */
 				break;
 				case 'i':
 				count += p_int(va_arg(ap, int));
@@ -44,7 +46,6 @@ int _printf(const char *format,...)
 				write(1, "%", 1);
 				write(1, &format[i], 2);
 				i++;
-				/* responde que si despues de % no hay format specifier*/
 				break;
 				}
 			}
