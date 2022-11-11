@@ -37,9 +37,9 @@ int main(void)
     printf("Return: %d\n", record);
     record = printf("Character:[%c]\n", 'H');
     printf("Return: %d\n", record);
-    record = _printf("String:[%s]\n", "I am a string !");
+    record = _printf("String:[%s]\n", NULL);
     printf("Return: %d\n", record);
-    record = printf("String:[%s]\n", "I am a string !");
+    record = printf("String:[%s]\n", NULL);
     printf("Return: %d\n", record);
     _printf("Address:[%p]\n", addr);
     printf("Address:[%p]\n", addr);

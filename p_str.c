@@ -14,6 +14,11 @@ int p_str(char *s)
 		write(1, s, len);
 		return (len);
 	}
+	else if (s == NULL)
+	{
+		write(1, "(null)", 6); 
+		return (6);
+	}
 	else
 		return (0);
 }
