@@ -30,3 +30,5 @@ int p_str( char *s)
 	else
 		return (0);
 }
+int p_int(void)
+{
