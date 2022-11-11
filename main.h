@@ -7,6 +7,6 @@ int _putchar(char c);
 int _printf(const char *format, ...);
 int p_char(char c);
 int p_str(char *s);
-int print_int(void);
+int p_int(int num);
 #endif
 
