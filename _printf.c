@@ -1,5 +1,9 @@
 #include "main.h"
-
+/**
+ * _printf - prints data
+ * @format: fixed parameter
+ * @ap: argument pointer
+ */
 int _printf(const char *format,...)
 {
 	int i = 0, count = 0;
@@ -23,7 +27,10 @@ int _printf(const char *format,...)
 				case 's':
 				count += p_str(va_arg(ap, char *));
 				/*function to print string*/
-				break;	
+				break;
+				case 'd':
+				count += p_int(va_arg(ap, int));
+				break;
 				case '%':
 				write(1, &format[i], 1);
 				count++;
