@@ -2,7 +2,6 @@
 /**
  * _printf - prints formated output
  * @format: fixed parameter
- * @ap: argument pointer
  * Return: number of chracter printed
  */
 int _printf(const char *format,...)
@@ -45,9 +44,7 @@ int _printf(const char *format,...)
 				count += p_int(va_arg(ap, int));
 				break;
 				default:
-				count = count + 2;
-				write(1, "%", 1);
-				write(1, &format[i], 2);
+				count += p_default(format[i]);
 				i++;
 				break;
 				}
