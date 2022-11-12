@@ -10,4 +10,3 @@ int p_str(char *s);
 int p_int(int num);
 int p_default(char c);
 #endif
-
