@@ -16,9 +16,9 @@ int p_str(char *s)
 	}
 	else if (s == NULL)
 	{
-		write(1, "(null)", 6); 
+		write(1, "(null)", 6);
 		return (6);
 	}
 	else
 		return (0);
-}
+
