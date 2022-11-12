@@ -14,11 +14,24 @@ int main(void)
     unsigned int ui;
     void *addr;
     int record;
+    char c = 'x';
 
     len = _printf("Let's try to printf a simple sentence.\n");
     len2 = printf("Let's try to printf a simple sentence.\n");
     ui = (unsigned int)INT_MAX + 1024;
     addr = (void *)0x7ffe637541f0;
+    printf("\n\n\n");
+
+    record = printf(NULL);
+    printf("%i\n", record);
+    record = printf("%i\n", c);
+    printf("%i\n", record);
+    
+    record = _printf(NULL);
+    _printf("Test % a \n");
+    record = _printf("%i\n", c);
+    _printf("%i\n", record);
+
     _printf("Length:[%   d, %i]\n", len, len);
     /**printf("Return: %d\n", record);*/
     record = printf("Length:[%d, %i]\n", len2, len2);
