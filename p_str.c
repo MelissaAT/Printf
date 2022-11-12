@@ -21,4 +21,4 @@ int p_str(char *s)
 	}
 	else
 		return (0);
-
+}
