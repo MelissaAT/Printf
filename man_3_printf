@@ -9,6 +9,7 @@ _printf \- a version of the printf function
 
 int _printf(const char *format, ...)
 
+_printf("Hello, user")
 _printf("Hello, %s", "user");
 
 .SH DESCRIPTION
@@ -20,10 +21,10 @@ The _printf() function sends a formatted string to the standard output (the disp
 %c - Signed character.
 %s - A string or sequence of character.
 
-The nuseradd does not take any options. However, you can supply username.
 .SH SEE ALSO
 printf(1), asprintf(3), puts(3)
 .SH BUGS
 No known bugs.
 .SH AUTHOR
 Melissa Arroyo and Rafael Vega.
+5672@holbertonstudents.com
